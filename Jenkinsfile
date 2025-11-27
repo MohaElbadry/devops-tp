@@ -2,14 +2,14 @@ pipeline {
     agent any
 
     environment {
-        IMAGE_NAME = "YOUR_DOCKER_HUB_USERNAME/tp4:latest"
+        IMAGE_NAME = "dockmoelbadry/devops-tp:latest"
         CONTAINER_NAME = "tp4-container"
     }
 
     stages {
         stage('Cloning Git') {
             steps {
-                git branch: 'master', url: 'https://github.com/YOUR_USERNAME/tp4.git'
+                git branch: 'main', url: 'https://github.com/MohaElbadry/devops-tp.git'
             }
         }
 
